@@ -1,6 +1,6 @@
 # babel-preset-kupibilet
 
-> Configurable preset that supports transforming JS both for client and serve
+> Configurable preset that supports transforming JS both for client and server
 
 ## Usage
 
