@@ -2,6 +2,17 @@
 
 > Configurable preset that supports transforming JS both for client and server
 
+## Install
+
+```sh
+$ npm install --save-dev babel-preset-kupibilet
+```
+or
+
+```sh
+$ yarn add --dev babel-preset-kupibilet
+```
+
 ## Usage
 
 ### Via `.babelrc` (Recommended)
