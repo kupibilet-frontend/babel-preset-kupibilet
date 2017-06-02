@@ -1,4 +1,20 @@
 {
    "name": "babel-preset-kupibilet",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "description": "Babel preset for isomorphic apps from kupibilet-frontend",
+   "main": "index.js",
+   "author": "Kupibilet.ru Frontend Team",
+   "repository": {
+     "type": "git",
+     "url": "git+https://github.com/kupibilet-frontend/babel-preset-kupibilet.git"
+   },
+   "keywords": [
+     "babel",
+     "preset",
+     "es2015",
+     "javascript"
+   ],
+   "bugs": {
+     "url": "https://github.com/kupibilet-frontend/babel-preset-kupibilet/issues"
+   },
 }
