@@ -5,9 +5,6 @@ node_js:
 before_script:
   - yarn global add makeshift && makeshift -r registry.npmjs.org
 
-script:
-  - npm run build-storybook
-
 deploy:
   - provider: npm
     email: v7rulnik@gmail.com

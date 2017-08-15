@@ -1,6 +1,5 @@
 {
   "name": "babel-preset-kupibilet",
-  "version": "1.0.0",
   "description": "Babel preset for isomorphic apps from kupibilet-frontend",
   "main": "index.js",
   "author": "Kupibilet.ru Frontend Team",
