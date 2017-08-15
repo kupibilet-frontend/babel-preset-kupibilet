@@ -5,7 +5,8 @@
   "author": "Kupibilet.ru Frontend Team",
   "scripts": {
     "test": "jest --no-cache",
-    "prepublish": "npm run test --silent"
+    "prepublish": "npm run test --silent",
+    "postversion": "git push --follow-tags"
   },
   "repository": {
     "type": "git",
