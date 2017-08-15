@@ -1,5 +1,7 @@
 # babel-preset-kupibilet
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kupibilet-frontend/babel-preset-kupibilet.svg)](https://greenkeeper.io/)
+
 > Configurable preset that supports transforming JS both for client and server
 
 ## Install
