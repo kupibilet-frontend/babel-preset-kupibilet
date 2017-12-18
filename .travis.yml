@@ -3,7 +3,7 @@ node_js:
 - stable
 
 before_script:
-  - yarn global add makeshift && makeshift -r registry.npmjs.org
+  - yarn global remove makeshift && yarn global add makeshift && makeshift -r registry.npmjs.org
 
 deploy:
   - provider: npm
