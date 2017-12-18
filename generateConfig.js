@@ -119,6 +119,10 @@ const generateConfig = ({ intl, env, target, targetFramework = 'react' }) => {
         'transform-react-inline-elements',
         'transform-react-remove-prop-types',
       )
+    } else if (env === 'test') {
+      plugins.push(
+        'transform-es2015-modules-commonjs',
+      )
     }
   } else if (targetFramework === 'preact') {
     plugins.push(
