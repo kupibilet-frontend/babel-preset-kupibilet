@@ -14,7 +14,7 @@ describe('Validate config:', () => {
   test('should transpile .jsx', () => {
     const { code } = babel.transform(`<div />`, transformOpts)
 
-    expect(code).toBe(
+    expect(code).toMatch(
       'React.createElement("div", null);'
     )
   })
