@@ -7,7 +7,7 @@ const generateConfig = ({ intl, env, target, targetFramework = 'react' }) => {
     ['lodash', {
       id: ['lodash', 'lodash-es'],
     }],
-    'react-loadable/babel',
+    '@7rulnik/react-loadable/babel',
   ]
 
   if (intl) {
