@@ -92,7 +92,6 @@ const generateConfig = ({ intl, env, target, targetFramework = 'react' }) => {
           node: 'current',
         },
         useBuiltIns: true,
-        debug: false,
       }],
     )
 
@@ -103,7 +102,7 @@ const generateConfig = ({ intl, env, target, targetFramework = 'react' }) => {
 
   presets.push(
     'react',
-    'stage-1',
+    require('./stage1')
   )
 
   if (targetFramework === 'react') {
