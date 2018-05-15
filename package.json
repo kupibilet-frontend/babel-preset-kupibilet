@@ -23,22 +23,22 @@
     "url": "https://github.com/kupibilet-frontend/babel-preset-kupibilet/issues"
   },
   "dependencies": {
-    "babel-plugin-dynamic-import-node": "^1.0.2",
-    "babel-plugin-lodash": "^3.2.11",
-    "babel-plugin-react-intl": "^2.3.1",
-    "babel-plugin-styled-components": "^1.1.7",
+    "babel-plugin-dynamic-import-node": "^1.2.0",
+    "babel-plugin-lodash": "^3.3.2",
+    "babel-plugin-react-intl": "^2.4.0",
+    "babel-plugin-styled-components": "^1.5.1",
     "babel-plugin-transform-react-inline-elements": "^6.22.0",
     "babel-plugin-transform-react-jsx-self": "^6.22.0",
     "babel-plugin-transform-react-jsx-source": "^6.22.0",
-    "babel-plugin-transform-react-remove-prop-types": "^0.4.8",
-    "babel-preset-env": "^1.6.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.13",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1"
   },
   "devDependencies": {
-    "babel-core": "^6.25.0",
-    "jest": "^20.0.4",
-    "react-loadable": "^5.3.1"
+    "babel-core": "^6.26.3",
+    "jest": "^22.4.3",
+    "react-loadable": "^5.4.0"
   },
   "peerDependencies": {
     "react": "^16.0.0",
