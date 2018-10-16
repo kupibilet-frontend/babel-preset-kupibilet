@@ -24,10 +24,14 @@
   },
   "dependencies": {
     "@7rulnik/react-loadable": "^5.3.4",
+    "@babel/plugin-proposal-async-generator-functions": "^7.1.0",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-decorators": "^7.1.2",
     "@babel/plugin-proposal-export-default-from": "^7.0.0",
     "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-transform-exponentiation-operator": "^7.1.0",
     "@babel/plugin-transform-modules-commonjs": "^7.1.0",
     "@babel/plugin-transform-react-inline-elements": "^7.0.0",
     "@babel/plugin-transform-react-jsx-self": "^7.0.0",
@@ -37,14 +41,15 @@
     "@babel/preset-react": "^7.0.0",
     "babel-plugin-lodash": "^3.3.4",
     "babel-plugin-react-intl": "^3.0.1",
-    "babel-plugin-styled-components": "^1.8.0"
+    "babel-plugin-styled-components": "^1.8.0",
+    "babel-plugin-syntax-trailing-function-commas": "^6.22.0"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "babel-core": "^7.0.0-bridge.0",
-    "react-loadable": "^5.4.0",
     "babel-jest": "^23.6.0",
     "jest": "test",
+    "react-loadable": "^5.4.0",
     "regenerator-runtime": "^0.12.1"
   },
   "peerDependencies": {
