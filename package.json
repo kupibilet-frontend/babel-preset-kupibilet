@@ -23,12 +23,16 @@
     "url": "https://github.com/kupibilet-frontend/babel-preset-kupibilet/issues"
   },
   "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-transform-modules-commonjs": "^7.1.0",
     "@babel/plugin-transform-react-inline-elements": "^7.0.0",
     "@babel/plugin-transform-react-jsx-self": "^7.0.0",
     "@babel/plugin-transform-react-jsx-source": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
+    "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "babel-plugin-lodash": "^3.3.4",
     "babel-plugin-react-intl": "^3.0.1",

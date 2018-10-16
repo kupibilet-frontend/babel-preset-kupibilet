@@ -1,5 +1,8 @@
 const generateConfig = ({ intl, env, target, targetFramework = 'react' }) => {
-  const presets = ['@babel/preset-react']
+  const presets = [
+    '@babel/preset-react',
+    '@babel/preset-flow',
+  ]
   const plugins = [
     ['styled-components', {
       ssr: true,
@@ -7,6 +10,10 @@ const generateConfig = ({ intl, env, target, targetFramework = 'react' }) => {
     ['lodash', {
       id: ['lodash', 'lodash-es'],
     }],
+    '@babel/plugin-syntax-dynamic-import',
+    '@babel/plugin-proposal-export-namespace-from',
+    '@babel/plugin-proposal-export-default-from',
+    '@babel/plugin-proposal-class-properties',
   ]
 
   if (intl) {
@@ -24,7 +31,7 @@ const generateConfig = ({ intl, env, target, targetFramework = 'react' }) => {
 
   if (target === 'browser') {
     presets.push(
-      ['env', {
+      ['@babel/preset-env', {
         modules: false,
         targets: {
           ie: 11,
@@ -80,17 +87,15 @@ const generateConfig = ({ intl, env, target, targetFramework = 'react' }) => {
           'es6.number.min-safe-integer',
           'es6.number.max-safe-integer',
         ],
-        useBuiltIns: true,
       }]
     )
   } else if (target === 'node') {
     presets.push(
-      ['env', {
+      ['@babel/preset-env', {
         modules: false,
         targets: {
           node: 'current',
         },
-        useBuiltIns: true,
       }],
     )
 
