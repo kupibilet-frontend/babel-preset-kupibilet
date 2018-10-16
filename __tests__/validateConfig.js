@@ -1,9 +1,10 @@
 const babel = require('babel-core')
-const config = require('../')
+const { presets, plugins } = require('../')
 
 describe('Validate config:', () => {
   const transformOpts = {
-    presets: './index.js'
+    presets,
+    plugins,
   }
 
   test('should run `babel-code` without errors', () => {
