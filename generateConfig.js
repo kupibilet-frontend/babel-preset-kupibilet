@@ -95,6 +95,7 @@ const generateConfig = ({ intl, env, target, targetFramework = 'react' }) => {
           'es6.number.min-safe-integer',
           'es6.number.max-safe-integer',
         ],
+        useBuiltIns: 'entry',
       }]
     )
   } else if (target === 'node') {
@@ -104,6 +105,7 @@ const generateConfig = ({ intl, env, target, targetFramework = 'react' }) => {
         targets: {
           node: 'current',
         },
+        useBuiltIns: 'entry',
       }],
     )
 
