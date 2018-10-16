@@ -14,6 +14,7 @@ const generateConfig = ({ intl, env, target, targetFramework = 'react' }) => {
     '@babel/plugin-proposal-export-namespace-from',
     '@babel/plugin-proposal-export-default-from',
     '@babel/plugin-proposal-class-properties',
+    '@7rulnik/react-loadable/babel',
   ]
 
   if (intl) {
