@@ -1,5 +1,5 @@
 const generateConfig = ({ intl, env, target, targetFramework = 'react' }) => {
-  const presets = []
+  const presets = ['@babel/preset-react']
   const plugins = [
     ['styled-components', {
       ssr: true,
@@ -7,7 +7,6 @@ const generateConfig = ({ intl, env, target, targetFramework = 'react' }) => {
     ['lodash', {
       id: ['lodash', 'lodash-es'],
     }],
-    '@7rulnik/react-loadable/babel',
   ]
 
   if (intl) {
@@ -100,27 +99,15 @@ const generateConfig = ({ intl, env, target, targetFramework = 'react' }) => {
     )
   }
 
-  presets.push(
-    'react',
-    require('./stage1')
-  )
-
   if (targetFramework === 'react') {
-    if (env === 'development') {
-      plugins.push(
-        // Adds component stack to warning messages
-        'transform-react-jsx-source',
-        // Adds __self attribute to JSX which React will use for some warnings
-        'transform-react-jsx-self',
-      )
-    } else if (env === 'production') {
+    if (env === 'production') {
       plugins.push(
         'transform-react-inline-elements',
         'transform-react-remove-prop-types',
       )
     } else if (env === 'test') {
       plugins.push(
-        'transform-es2015-modules-commonjs',
+        '@babel/plugin-transform-modules-commonjs',
       )
     }
   } else if (targetFramework === 'preact') {
