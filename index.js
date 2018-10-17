@@ -6,4 +6,4 @@ const config = generateConfg({
   target: process.env.TARGET_ENV,
 })
 
-module.exports = config
+module.exports = () => config

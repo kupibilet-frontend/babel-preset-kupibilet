@@ -3,6 +3,7 @@ const generateConfig = ({ intl, env, target, targetFramework = 'react' }) => {
   const presets = [
     ['@babel/preset-react', {
       development: isDev,
+      useBuiltIns: true,
     }],
     '@babel/preset-flow',
   ]

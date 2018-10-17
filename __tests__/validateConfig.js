@@ -3,8 +3,7 @@ const { presets, plugins } = require('../')
 
 describe('Validate config:', () => {
   const transformOpts = {
-    presets,
-    plugins,
+    presets: ['./index.js'],
   }
 
   test('should run `babel-code` without errors', () => {
