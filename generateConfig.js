@@ -3,7 +3,6 @@ const generateConfig = ({ intl, env, target, targetFramework = 'react' }) => {
   const presets = [
     ['@babel/preset-react', {
       development: isDev,
-      useBuiltIns: isDev,
     }],
     '@babel/preset-flow',
   ]
@@ -19,6 +18,7 @@ const generateConfig = ({ intl, env, target, targetFramework = 'react' }) => {
     '@babel/plugin-proposal-export-default-from',
     '@babel/plugin-proposal-class-properties',
     'babel-plugin-syntax-trailing-function-commas',
+    'babel-plugin-transform-export-extensions',
     '@7rulnik/react-loadable/babel',
   ]
 
