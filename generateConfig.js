@@ -1,5 +1,12 @@
 const generateConfig = ({ intl, env, target, targetFramework = 'react' }) => {
-  const presets = []
+  const isDev = env === 'development'
+  const presets = [
+    ['@babel/preset-react', {
+      development: isDev,
+      useBuiltIns: true,
+    }],
+    '@babel/preset-flow',
+  ]
   const plugins = [
     ['styled-components', {
       ssr: true,
@@ -7,6 +14,12 @@ const generateConfig = ({ intl, env, target, targetFramework = 'react' }) => {
     ['lodash', {
       id: ['lodash', 'lodash-es'],
     }],
+    '@babel/plugin-syntax-dynamic-import',
+    '@babel/plugin-proposal-export-namespace-from',
+    '@babel/plugin-proposal-export-default-from',
+    '@babel/plugin-proposal-class-properties',
+    'babel-plugin-syntax-trailing-function-commas',
+    'babel-plugin-transform-export-extensions',
     '@7rulnik/react-loadable/babel',
   ]
 
@@ -25,7 +38,7 @@ const generateConfig = ({ intl, env, target, targetFramework = 'react' }) => {
 
   if (target === 'browser') {
     presets.push(
-      ['env', {
+      ['@babel/preset-env', {
         modules: false,
         targets: {
           ie: 11,
@@ -81,17 +94,17 @@ const generateConfig = ({ intl, env, target, targetFramework = 'react' }) => {
           'es6.number.min-safe-integer',
           'es6.number.max-safe-integer',
         ],
-        useBuiltIns: true,
+        useBuiltIns: 'entry',
       }]
     )
   } else if (target === 'node') {
     presets.push(
-      ['env', {
+      ['@babel/preset-env', {
         modules: false,
         targets: {
           node: 'current',
         },
-        useBuiltIns: true,
+        useBuiltIns: 'entry',
       }],
     )
 
@@ -100,27 +113,14 @@ const generateConfig = ({ intl, env, target, targetFramework = 'react' }) => {
     )
   }
 
-  presets.push(
-    'react',
-    require('./stage1')
-  )
-
   if (targetFramework === 'react') {
-    if (env === 'development') {
+    if (env === 'production') {
       plugins.push(
-        // Adds component stack to warning messages
-        'transform-react-jsx-source',
-        // Adds __self attribute to JSX which React will use for some warnings
-        'transform-react-jsx-self',
-      )
-    } else if (env === 'production') {
-      plugins.push(
-        'transform-react-inline-elements',
         'transform-react-remove-prop-types',
       )
     } else if (env === 'test') {
       plugins.push(
-        'transform-es2015-modules-commonjs',
+        '@babel/plugin-transform-modules-commonjs',
       )
     }
   } else if (targetFramework === 'preact') {
