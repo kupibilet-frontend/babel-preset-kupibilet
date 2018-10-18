@@ -116,6 +116,7 @@ const generateConfig = ({ intl, env, target, targetFramework = 'react' }) => {
   if (targetFramework === 'react') {
     if (env === 'production') {
       plugins.push(
+        '@babel/plugin-transform-react-inline-elements',
         'transform-react-remove-prop-types',
       )
     } else if (env === 'test') {
