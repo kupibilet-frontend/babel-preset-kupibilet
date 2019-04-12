@@ -1,4 +1,4 @@
-const generateConfig = ({ intl, env, target, targetFramework = 'react' }) => {
+const generateConfig = ({ intl, env, target, babelPresetModules = false, targetFramework = 'react' }) => {
   const isDev = env === 'development'
   const presets = [
     ['@babel/preset-react', {
@@ -39,7 +39,7 @@ const generateConfig = ({ intl, env, target, targetFramework = 'react' }) => {
   if (target === 'browser') {
     presets.push(
       ['@babel/preset-env', {
-        modules: false,
+        modules: babelPresetModules,
         targets: {
           ie: 11,
         },
@@ -100,7 +100,7 @@ const generateConfig = ({ intl, env, target, targetFramework = 'react' }) => {
   } else if (target === 'node') {
     presets.push(
       ['@babel/preset-env', {
-        modules: false,
+        modules: babelPresetModules,
         targets: {
           node: 'current',
         },
