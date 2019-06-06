@@ -14,6 +14,21 @@ const generateConfig = ({ intl, env, target, babelPresetModules = false, targetF
     ['lodash', {
       id: ['lodash', 'lodash-es'],
     }],
+    ['import', {
+      "libraryName": "@kupibilet/ui/components",
+      "libraryDirectory": "",
+      "camel2DashComponentName": false,
+    }],
+    ['import', {
+      "libraryName": "@kupibilet/ui/blocks",
+      "libraryDirectory": "",
+      "camel2DashComponentName": false,
+    }],
+    ['import', {
+      "libraryName": "@kupibilet/ui/utils",
+      "libraryDirectory": "",
+      "camel2DashComponentName": false,
+    }],
     '@babel/plugin-syntax-dynamic-import',
     '@babel/plugin-proposal-export-namespace-from',
     '@babel/plugin-proposal-export-default-from',
