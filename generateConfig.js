@@ -18,17 +18,23 @@ const generateConfig = ({ intl, env, target, babelPresetModules = false, targetF
       "libraryName": "@kupibilet/ui/components",
       "libraryDirectory": "",
       "camel2DashComponentName": false,
-    },"@kupibilet/ui/components"],
+    }],
     ['import', {
       "libraryName": "@kupibilet/ui/blocks",
       "libraryDirectory": "",
       "camel2DashComponentName": false,
-    },"@kupibilet/ui/blocks"],
+    },'@kupibilet/ui/blocks'],
     ['import', {
       "libraryName": "@kupibilet/ui/utils",
       "libraryDirectory": "",
       "camel2DashComponentName": false,
-    },"@kupibilet/ui/utils"],
+      "customName": (name) => {
+        if(['mq','withMedia'].includes(name)) {
+          return "@kupibilet/ui/utils/media-queries.js"
+        }
+        return `@kupibilet/ui/utils/${name}`
+      }
+    },'@kupibilet/ui/utils'],
     '@babel/plugin-syntax-dynamic-import',
     '@babel/plugin-proposal-export-namespace-from',
     '@babel/plugin-proposal-export-default-from',
