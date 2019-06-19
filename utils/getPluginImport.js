@@ -1,5 +1,5 @@
 const getPluginImport = (libraryName,  camel2Dash = false) => {
-   const result = ['import', {
+   const pluginsImport = ['import', {
         libraryName,
         libraryDirectory: "",
         camel2DashComponentName: camel2Dash,
@@ -13,7 +13,7 @@ const getPluginImport = (libraryName,  camel2Dash = false) => {
           }
     }
 
-    return result
+    return pluginsImport
 }
 
 module.exports = {
