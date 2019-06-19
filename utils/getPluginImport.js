@@ -5,7 +5,7 @@ const getPluginImport = (libraryName,  camel2Dash = false) => {
         camel2DashComponentName: camel2Dash,
     }, libraryName]
     if (libraryName.includes('utils')){
-        result[1].customName = (name) => {
+        pluginsImport[1].customName = (name) => {
             if(['mq'].includes(name)) {
               return "@kupibilet/ui/utils/media-queries.js"
             }
