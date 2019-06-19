@@ -1,3 +1,5 @@
+const { getPluginImport } = require('./utils/getPluginImport')
+
 const generateConfig = ({ intl, env, target, babelPresetModules = false, targetFramework = 'react' }) => {
   const isDev = env === 'development'
   const presets = [
@@ -14,27 +16,9 @@ const generateConfig = ({ intl, env, target, babelPresetModules = false, targetF
     ['lodash', {
       id: ['lodash', 'lodash-es'],
     }],
-    ['import', {
-      "libraryName": "@kupibilet/ui/components",
-      "libraryDirectory": "",
-      "camel2DashComponentName": false,
-    }],
-    ['import', {
-      "libraryName": "@kupibilet/ui/blocks",
-      "libraryDirectory": "",
-      "camel2DashComponentName": false,
-    },'@kupibilet/ui/blocks'],
-    ['import', {
-      "libraryName": "@kupibilet/ui/utils",
-      "libraryDirectory": "",
-      "camel2DashComponentName": false,
-      "customName": (name) => {
-        if(['mq','withMedia'].includes(name)) {
-          return "@kupibilet/ui/utils/media-queries.js"
-        }
-        return `@kupibilet/ui/utils/${name}`
-      }
-    },'@kupibilet/ui/utils'],
+    getPluginImport("@kupibilet/ui/components"),
+    getPluginImport("@kupibilet/ui/blocks"),
+    getPluginImport("@kupibilet/ui/utils"),
     '@babel/plugin-syntax-dynamic-import',
     '@babel/plugin-proposal-export-namespace-from',
     '@babel/plugin-proposal-export-default-from',
