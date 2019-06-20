@@ -1,4 +1,4 @@
-const { getPluginImport } = require('./utils/getPluginImport')
+const uiKitImportPlugins = require('./parts/plugins/ui-kit-import')
 
 const generateConfig = ({ intl, env, target, babelPresetModules = false, targetFramework = 'react' }) => {
   const isDev = env === 'development'
@@ -16,9 +16,6 @@ const generateConfig = ({ intl, env, target, babelPresetModules = false, targetF
     ['lodash', {
       id: ['lodash', 'lodash-es'],
     }],
-    getPluginImport("@kupibilet/ui/components"),
-    getPluginImport("@kupibilet/ui/blocks"),
-    getPluginImport("@kupibilet/ui/utils"),
     '@babel/plugin-syntax-dynamic-import',
     '@babel/plugin-proposal-export-namespace-from',
     '@babel/plugin-proposal-export-default-from',
@@ -26,6 +23,7 @@ const generateConfig = ({ intl, env, target, babelPresetModules = false, targetF
     'babel-plugin-syntax-trailing-function-commas',
     'babel-plugin-transform-export-extensions',
     '@7rulnik/react-loadable/babel',
+    ...uiKitImportPlugins,
   ]
 
   if (intl) {
