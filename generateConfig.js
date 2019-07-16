@@ -98,6 +98,7 @@ const generateConfig = ({ intl, env, target, babelPresetModules = false, targetF
           'es6.number.max-safe-integer',
         ],
         useBuiltIns: 'entry',
+        corejs: 3,
       }]
     )
   } else if (target === 'node') {
@@ -108,6 +109,7 @@ const generateConfig = ({ intl, env, target, babelPresetModules = false, targetF
           node: 'current',
         },
         useBuiltIns: 'entry',
+        corejs: 3,
       }],
     )
 
