@@ -49,7 +49,7 @@
     "babel-jest": "^23.6.0",
     "jest": "^24.8.0",
     "react-loadable": "^5.4.0",
-    "regenerator-runtime": "^0.12.1"
+    "regenerator-runtime": "^0.13.3"
   },
   "peerDependencies": {
     "react": "^16.0.0",
