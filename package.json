@@ -44,15 +44,17 @@
     "babel-plugin-transform-react-inline-elements": "^6.22.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.2",
+    "@babel/core": "^7.5.4",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
+    "core-js": "^3.1.4",
     "jest": "^24.8.0",
     "react-loadable": "^5.4.0",
     "regenerator-runtime": "^0.12.1"
   },
   "peerDependencies": {
     "react": "^16.0.0",
-    "react-loadable": "^5.3.1"
+    "react-loadable": "^5.3.1",
+    "core-js": "^3.1.4"
   }
 }
