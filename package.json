@@ -33,7 +33,7 @@
     "@babel/plugin-transform-react-jsx-self": "^7.9.0",
     "@babel/plugin-transform-react-jsx-source": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
-    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-flow": "^7.9.0",
     "@babel/preset-react": "^7.0.0",
     "babel-plugin-import": "^1.12.0",
     "babel-plugin-lodash": "^3.3.4",
