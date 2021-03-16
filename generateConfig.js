@@ -10,9 +10,17 @@ const generateConfig = ({ intl, env, target, babelPresetModules = false, targetF
     '@babel/preset-flow',
   ]
   const plugins = [
-    ['styled-components', {
-      ssr: true,
-    }],
+    [
+      "babel-plugin-styled-components",
+      {
+        "ssr": true,
+        "minify": true,
+        "transpileTemplateLiterals": true,
+        "pure": true,
+        "displayName": true,
+        "preprocess": false
+      }
+    ],
     ['lodash', {
       id: ['lodash', 'lodash-es'],
     }],

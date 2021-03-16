@@ -38,7 +38,7 @@
     "babel-plugin-import": "^1.12.0",
     "babel-plugin-lodash": "^3.3.4",
     "babel-plugin-react-intl": "^3.0.1",
-    "babel-plugin-styled-components": "^1.8.0",
+    "babel-plugin-styled-components": "^1.12.0",
     "babel-plugin-syntax-trailing-function-commas": "^6.22.0",
     "babel-plugin-transform-export-extensions": "^6.22.0",
     "babel-plugin-transform-react-inline-elements": "^6.22.0"
@@ -53,8 +53,8 @@
     "regenerator-runtime": "^0.12.1"
   },
   "peerDependencies": {
+    "core-js": "^3.1.4",
     "react": "^16.0.0",
-    "react-loadable": "^5.3.1",
-    "core-js": "^3.1.4"
+    "react-loadable": "^5.3.1"
   }
 }
