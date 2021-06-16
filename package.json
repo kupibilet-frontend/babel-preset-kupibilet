@@ -27,6 +27,8 @@
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/plugin-proposal-export-default-from": "^7.0.0",
     "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.13.8",
+    "@babel/plugin-proposal-optional-chaining": "^7.13.12",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-transform-modules-commonjs": "^7.1.0",
     "@babel/plugin-transform-react-inline-elements": "^7.0.0",
@@ -41,22 +43,21 @@
     "babel-plugin-styled-components": "^1.8.0",
     "babel-plugin-syntax-trailing-function-commas": "^6.22.0",
     "babel-plugin-transform-export-extensions": "^6.22.0",
-    "babel-plugin-transform-react-inline-elements": "^6.22.0",
-    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.13.8",
-    "@babel/plugin-proposal-optional-chaining": "^7.13.12"
+    "babel-plugin-transform-react-inline-elements": "^6.22.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.4",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
+    "babel-plugin-formatjs": "^10.2.20",
     "core-js": "^3.1.4",
     "jest": "^24.8.0",
     "react-loadable": "^5.4.0",
     "regenerator-runtime": "^0.12.1"
   },
   "peerDependencies": {
+    "core-js": "^3.1.4",
     "react": "^16.0.0",
-    "react-loadable": "^5.3.1",
-    "core-js": "^3.1.4"
+    "react-loadable": "^5.3.1"
   }
 }
