@@ -41,6 +41,15 @@ const generateConfig = ({ intl, env, target, babelPresetModules = false, targetF
     }
   }
 
+  plugins.push(
+    [
+      'formatjs',
+      {
+        removeDefaultMessage: true,
+      }
+    ],
+  )
+
   if (target === 'browser') {
     presets.push(
       ['@babel/preset-env', {
