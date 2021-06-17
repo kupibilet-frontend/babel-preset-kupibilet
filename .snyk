@@ -1,0 +1,32 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-450202:
+    - babel-plugin-lodash > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2019-07-03T22:24:22.270Z'
+    - babel-plugin-styled-components > lodash:
+        patched: '2019-07-03T22:24:22.270Z'
+    - babel-plugin-lodash > @babel/types > lodash:
+        patched: '2019-07-03T22:24:22.270Z'
+    - '@babel/plugin-transform-modules-commonjs > @babel/helper-module-transforms > lodash':
+        patched: '2019-07-03T22:24:22.270Z'
+    - '@babel/preset-env > @babel/plugin-transform-dotall-regex > @babel/helper-regex > lodash':
+        patched: '2019-07-03T22:24:22.270Z'
+    - babel-plugin-styled-components > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2019-07-03T22:24:22.270Z'
+    - babel-plugin-lodash > lodash:
+        patched: '2019-07-03T22:24:22.270Z'
+    - babel-plugin-import > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2019-07-03T22:24:22.270Z'
+    - '@babel/plugin-transform-modules-commonjs > @babel/helper-module-transforms > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2019-07-03T22:24:22.270Z'
+    - '@babel/preset-env > @babel/plugin-transform-object-super > @babel/helper-replace-supers > @babel/traverse > @babel/generator > lodash':
+        patched: '2019-07-03T22:24:22.270Z'
+    - '@babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/traverse > @babel/generator > @babel/types > lodash':
+        patched: '2019-07-03T22:24:22.270Z'
+    - '@babel/plugin-proposal-class-properties > @babel/helper-create-class-features-plugin > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash':
+        patched: '2019-07-03T22:24:22.270Z'
+    - '@babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2019-07-03T22:24:22.270Z'
