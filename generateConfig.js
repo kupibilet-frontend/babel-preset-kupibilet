@@ -24,6 +24,7 @@ const generateConfig = ({ intl, env, target, babelPresetModules = false, targetF
     'babel-plugin-transform-export-extensions',
     '@babel/plugin-proposal-nullish-coalescing-operator',
     '@babel/plugin-proposal-optional-chaining',
+    '@loadable/babel-plugin',
     ...uiKitImportPlugins,
   ]
 
