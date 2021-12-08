@@ -34,7 +34,6 @@
     "@babel/plugin-transform-react-jsx-self": "^7.0.0",
     "@babel/plugin-transform-react-jsx-source": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
-    "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "@loadable/babel-plugin": "^5.13.2",
     "babel-plugin-formatjs": "^10.2.20",

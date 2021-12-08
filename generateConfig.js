@@ -7,7 +7,6 @@ const generateConfig = ({ intl, env, target, babelPresetModules = false, targetF
       development: isDev,
       useBuiltIns: true,
     }],
-    '@babel/preset-flow',
   ]
   const plugins = [
     ['styled-components', {
